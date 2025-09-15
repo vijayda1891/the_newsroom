@@ -21,7 +21,9 @@
     <div class="form-group">
       <%= f.email_field :email, class: "form-control", placeholder:" ", required: true %>
       <%= f.label :email %>
-      <span class="validation-hint", hidden="false", id="password-email-warning"> Enter valid Email</span>
+      <%= icon "circle-check", class: "icon-check icon-display", id: "email-correct" %>
+      <%= icon "circle-alert", class: "icon-alert icon-display", id: "email-alert" %>
+      <span class="validation-hint", hidden="false", id="email-warning"> Invalid Email </span>
     </div>
 
     <div class="form-actions">
