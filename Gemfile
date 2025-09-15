@@ -64,3 +64,5 @@ group :test do
 end
 
 gem 'rails_icons'
+
+gem 'devise', '~> 4.9', '>= 4.9.3'

@@ -1,0 +1,42 @@
+<header>
+  <div class="authentication-header">
+    <div class="navigation-container">
+      <%= icon "chevron-left" %>
+      <span><%= link_to "Home", pages_index_path, class: "home-page-link" %></span>
+    </div>
+    <div class="authentication-main-title">
+      <h1> The Newsroom </h1>
+    </div>
+  </div>
+</header>
+
+<div class="form-content">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    
+    <div class="form-group">
+      <%= f.email_field :email, class: "form-control", placeholder:" ", required: true %>
+      <%= f.label :email %>
+      <span class="validation-hint", hidden="false", id="session-email-warning"> Enter valid Email</span>
+    </div>
+
+    <div class="form-group">
+      <%= f.password_field :password, class: "form-control", placeholder:" ", required: true %>
+      <%= f.label :password %>
+    </div>
+
+    <%# if devise_mapping.rememberable? %>
+      <div class="field">
+        <%#= f.check_box :remember_me %>
+        <%#= f.label :remember_me %>
+      </div>
+    <%# end %>
+
+    <div class="form-actions">
+      <%= f.submit "Login", class: "login_submit", disabled: true, id: "new_user_session" %>
+      <div class="additional-link">
+        <p> No Account? <span><%= link_to "Register Now", new_user_registration_path, class: "login_registration_link", data: { turbo: false } %></span></p>
+        <span><%= link_to "Forgot Password", new_user_password_path, class: "login_password_link", data: { turbo: false } %></span>
+      </div>
+    </div>
+  <% end %>
+</div>

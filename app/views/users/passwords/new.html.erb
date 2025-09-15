@@ -1,0 +1,32 @@
+<header>
+  <div class="authentication-header">
+    <div class="navigation-container">
+      <%= icon "chevron-left" %>
+      <span><%= link_to "Back", new_user_session_path, class: "home-page-link" %></span>
+    </div>
+    <div class="authentication-main-title">
+      <h1> The Newsroom </h1>
+    </div>
+  </div>
+</header>
+
+<div class="password-reset-content">
+  <p>Submit your email address below and we'll send you a link to verify your account and re-set your password</p>
+</div>
+
+<div class="form-content">
+
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "users/shared/error_messages", resource: resource %>
+    <div class="form-group">
+      <%= f.email_field :email, class: "form-control", placeholder:" ", required: true %>
+      <%= f.label :email %>
+      <span class="validation-hint", hidden="false", id="password-email-warning"> Enter valid Email</span>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit "Submit", class: "password_reset", disabled: true, id: "password_reset_submit" %>
+    </div>
+  <% end %>
+
+</div>

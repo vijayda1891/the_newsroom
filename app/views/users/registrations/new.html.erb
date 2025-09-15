@@ -1,0 +1,71 @@
+<header>
+  <div class="authentication-header">
+    <div class="navigation-container">
+      <%= icon "chevron-left" %>
+      <span><%= link_to "Home", pages_index_path, class: "home-page-link" %></span>
+    </div>
+    <div class="authentication-main-title">
+      <h1> The Newsroom </h1>
+    </div>
+  </div>
+</header>
+
+<div class="form-content">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "users/shared/error_messages", resource: resource %>
+
+    <div class="field-group">
+      <div class="form-group">
+        <%= f.text_field :first_name, class: "form-control", placeholder:" ", required: true %>
+        <%= f.label :first_name %>
+      </div>
+    
+
+      <div class="form-group">
+        <%= f.text_field :surname, class: "form-control", placeholder:" ", required: true %>
+        <%= f.label :surname %>
+      </div>
+
+    </div>  
+
+    <div class="field-group">
+      
+      <div class="form-group">
+        <%= f.select :gender, options_for_select(['Male', 'Female', 'Not Specified']), { prompt: " -- Select One -- "}, { class: "form-control registration_select", placeholder:" ",required: "true" } %>
+        <%= f.label :gender %>
+      </div>
+
+      <div class="form-group">
+        <%= f.date_field :date_of_birth, class: "form-control", placeholder:" ", required: true %>
+        <%= f.label :date_of_birth %>
+      </div>
+      
+    </div>  
+    
+    <div class="form-group">
+      <%= f.email_field :email, class: "form-control", placeholder:" ", required: true %>
+      <%= f.label :email %>
+      <span class="validation-hint", hidden="false", id="registration-email-warning"> Enter valid Email</span>
+    </div>
+
+    <div class="form-group">
+      <%= f.password_field :password, class: "form-control", placeholder:" ", required: true %>
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+        </br><em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+    </div>
+
+    <div class="form-group">
+      <%= f.password_field :password_confirmation, class: "form-control", placeholder:" ", required: true %>
+      <%= f.label :password_confirmation %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit "Register Now", disabled: true, class: "registration_submission", id: "new_user_registration" %>
+      <div class="additional-link">
+        <p> Already have an account? <span><%= link_to "Login", new_user_session_path, class: "registration_login_link", data: { turbo: false } %></span></p>
+      </div>
+    </div>
+  <% end %>
+</div>
