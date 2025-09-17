@@ -8,6 +8,7 @@ const EmailValidationHint = document.getElementById('email-warning');
 const EmailValidationCheckIcon = document.getElementById('email-correct');
 const EmailValidationAlertIcon = document.getElementById('email-alert');
 const passwordField = document.getElementById('user_password');
+const passwordConfirmationField = document.getElementById('user_password_confirmation');
 const showHidePasswordIcon = document.getElementById('display-password');
 const passwordValidation = document.getElementById('password-feedback');
 
@@ -93,4 +94,13 @@ passwordField.addEventListener('keyup', function(){
         passwordValidation.innerHTML = '';
     }
 });
+
+// passwordConfirmationField.addEventListener('keyup', function(){
+//     const messages = validatePassword(passwordConfirmationField.value);
+//     if (messages.length > 0) {
+//         passwordValidation.innerHTML = messages.map(msg => `<p class="invalid">${msg}</p>`).join('');
+//     } else {
+//         passwordValidation.innerHTML = '';
+//     }
+// });
 
