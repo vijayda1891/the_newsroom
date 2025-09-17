@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(resource)
-
     if resource.is_a?(User)
       dashboard_index_path 
     else
@@ -16,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :surname, :gender, :date_of_birth])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [ :first_name, :surname, :gender, :date_of_birth ])
   end
 
 end

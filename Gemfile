@@ -6,7 +6,7 @@ gem "rails", "~> 8.0.2", ">= 8.0.2.1"
 gem "propshaft"
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", ">= 2.1"
-gem 'mysql2'
+gem "mysql2"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -63,6 +63,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'rails_icons'
-
-gem 'devise', '~> 4.9', '>= 4.9.3'
+gem "rails_icons"
+gem "devise", "~> 4.9", ">= 4.9.3"
+gem "dotenv-rails", "~> 2.1", ">= 2.1.1", groups: [ :development, :test ]
