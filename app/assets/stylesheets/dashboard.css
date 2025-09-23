@@ -1,11 +1,4 @@
-.dashboard-body {
-  background-color: #242326;
-}
-
 .dashboard-container{
-  padding: 1%;
-  width: 85vw;
-  margin: 0 auto;
 }
 .dashboard-heading{
     display: flex;
@@ -24,6 +17,11 @@
 
 .dashboard-header{
   text-align: center;
+  color: #efd8ba;
+}
+
+.dashboard-header-link{
+  text-decoration: none;
   color: #efd8ba;
 }
 

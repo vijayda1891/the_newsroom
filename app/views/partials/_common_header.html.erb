@@ -4,7 +4,9 @@
             <%= Date.today.strftime("%B %e, %Y") %>
         </div>
         <div class="dashboard-header-content dashboard-header">
-            <h1> The Newsroom </h1>
+            <%= link_to dashboard_index_path, class: "dashboard-header-link", data: { turbo: false} do%>
+                <h1> The Newsroom </h1>
+            <% end %>    
         </div>
         <div class="dashboard-header-content dashboard-header account-links">
             <div class="user-account">
@@ -18,7 +20,7 @@
         <ul>
             <li><%= link_to "News", "", class: "dashboard-links", data: { turbo: false} %></li>
             <li><%= link_to "Articles", "", class: "dashboard-links", data: { turbo: false} %></li>
-            <li><%= link_to "Game Reviews", "", class: "dashboard-links", data: { turbo: false} %></li>
+            <li><%= link_to "Game Reviews", game_reviews_path, class: "dashboard-links", data: { turbo: false} %></li>
             <li><%= link_to "Book Reviews", "", class: "dashboard-links", data: { turbo: false} %></li>
         </ul>
     </div>

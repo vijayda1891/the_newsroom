@@ -8,3 +8,18 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+.app-common-container {
+    background-color: #242326;
+    padding: 1%;
+    width: 85vw;
+    margin: 0 auto;
+}
+
+.sub-heading-header{
+    /* display: flex; */
+}
+
+.sub-heading-content{
+    margin-top: 10px;
+}

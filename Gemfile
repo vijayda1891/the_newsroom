@@ -65,4 +65,8 @@ end
 
 gem "rails_icons"
 gem "devise", "~> 4.9", ">= 4.9.3"
-gem "dotenv-rails", "~> 2.1", ">= 2.1.1", groups: [ :development, :test ]
+gem "carrierwave", "~> 3.1", ">= 3.1.2"
+group :development, :test do
+  gem "rspec-rails", "~> 8.0", ">= 8.0.1"
+  gem "dotenv-rails", "~> 2.1", ">= 2.1.1"
+end

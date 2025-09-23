@@ -1,0 +1,44 @@
+<body class="app-common-container">
+    <%= render "partials/common_header" %>
+    <main class="sub-heading-content">
+        <div class="sub-heading-header">
+            <div class="tab-header">
+                <h3> Game Reviews</h3>
+            </div>
+            <div class="add-new-container">
+                <%= icon "plus" %>
+                <span><%= link_to "Add Review", new_game_review_path, class: "new-game-review", data: { turbo: false} %></span>
+            </div>
+        </div>
+        <div class="reviews-main-content">
+            <div class="left-main-content">
+                <% @game_reviews.each do |review|%>
+                <div class="game-review-card">
+                    <div class="review-image-box">
+                        <%= image_tag review.avatar.url, class: "game-image" %>
+                    </div>
+                    <div class="review-content">
+                        <%= link_to game_review_path(review), class: "full-review-link", data: { turbo: false} do %>
+                            <p class="review-title"><%= review.title %><p>
+                        <% end %>
+                        <p class="review-descripttion"><%= review.short_description %></p>
+                        <p class="review-release"><%= review.release.strftime("%B %e, %Y") %></p>
+                        <p class="review-rating"><%=  review.rating %></p>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+            <div class="right-main-content">
+                <div class="heading-description">
+                    <h3> About </h3>
+                    <p> Find your next captivating gaming moment. Reviews about a wide variety of games across multiple genre's. Each review is scored based on it's overall quality. </p>
+                </div>
+                <div class="sidebar-content">
+                    <div class="recent-reviews-header">
+                        <h2> Recent Reviews </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

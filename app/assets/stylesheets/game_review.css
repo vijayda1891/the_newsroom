@@ -1,0 +1,170 @@
+.sub-heading-header{
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tab-header h3{
+    display: flex;
+    align-items: center; 
+    text-align: center; 
+    color: #efd8ba;
+    margin: 30px 50px; 
+}
+
+.tab-header h3::before,
+.tab-header h3::after {
+  content: '';
+  flex-grow: 1; 
+  border-bottom: 2px solid rgb(116, 103, 103);
+  margin: 0 10px; 
+}
+
+
+.add-new-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #3ff2b4;
+}
+
+.new-game-review{
+    text-decoration: none;
+    color:#3ff2b4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.new-game-review:hover{
+    background-color: #3ff2b4;
+    color: black;
+    border-radius: 2px;
+    padding: 4px;
+}
+
+.reviews-main-content{
+    display: flex; 
+    width: 100%;
+    gap: 10px;
+}
+
+.left-main-content{
+    flex: 2.2; 
+}
+
+.right-main-content{
+    flex: 0.7; 
+}
+
+.heading-description{
+    background-color: #efd8ba;
+    border-radius: 4px;
+    color: #242326;
+    padding: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.recent-reviews-header{
+    color: #efd8ba;
+    font-family: monospace;
+    font-style: italic;
+    border-bottom: 2px solid rgb(116, 103, 103);
+}
+
+.game-review-form{
+    width: 80vw;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.game-review-lables, .image-field{
+    color: #efd8ba;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-field-uniform {
+  width: 100%; 
+}
+
+.formGroup {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+.formGroup label {
+    width: 30%; 
+    min-width: 30%; 
+    flex-shrink: 0; 
+    text-align: left; 
+    margin-right: 10px; 
+}
+
+.game-review-submit{
+    font-family: 'Courier New', Courier, monospace;
+    font-size:medium;
+    font-weight: bold;
+    padding: 6px;
+}
+
+.game-review-card {
+    box-shadow: 0 4px 8px 0 rgba(245, 215, 150, 0.2);
+    transition: 0.3s;
+    display: flex;
+    height: 190px;
+    margin-bottom: 20px;
+}
+
+.game-review-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(245, 225, 139, 0.2);
+}
+
+.review-image-box{
+    flex: 0.5;
+}
+
+.review-content {
+    padding: 2px 16px;
+    flex: 2.5;
+    line-height: 15px;
+}
+
+.game-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-title{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    color: #eebb79;
+}
+
+.review-descripttion{
+    color: #ffffff;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.review-release{
+    color: #eebb79;
+}
+
+.review-rating{
+    color: #ffffff;
+}
+
+.full-review-link{
+    text-decoration: none;
+}
+
+.review-title:hover{
+    color: orange;
+}
+
+.filled-star {
+  color: gold; /* Or any desired color for the filled star */
+  font-size: 24px; /* Adjust size as needed */
+}
