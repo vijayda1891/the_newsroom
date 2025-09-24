@@ -1,10 +1,10 @@
 .dashboard-container{
 }
 .dashboard-heading{
-    display: flex;
-    align-items: anchor-center;
-    border-bottom: 2px groove rgb(116, 103, 103);
-    height: 7vh;
+  display: flex;
+  align-items: anchor-center;
+  border-bottom: 2px groove rgb(116, 103, 103);
+  height: 7vh;
 }
 
 .dashboard-header-content {
@@ -46,7 +46,7 @@
   color: #efd8ba;
 }
 
-.user-account-link:hover, .logout-link:hover, .dashboard-links:hover{
+.user-account-link:hover, .logout-link:hover{
   background-color: #f5e5da;
   padding: 2px;
   border-radius: 2px;
@@ -54,7 +54,7 @@
 }
 
 .dashboard-navbar{
-  border-bottom: 2px groove rgb(116, 103, 103);
+    border-bottom: 2px groove rgb(116, 103, 103);
 }
 
 .dashboard-navbar ul{
@@ -70,10 +70,19 @@
   transition: background-color 0.3s ease;
 }
 
-.dashboard-links{
+.dashboard-links a{
   text-decoration: none;
   font-family: monospace;
   font-size: large;
   font-weight: bold;
   color: #efd8ba;
+}
+
+.active{
+  background-color: #f5e5da;
+  padding: 2px;
+  border-radius: 2px;
+}
+.active a{
+  color: #242326;
 }

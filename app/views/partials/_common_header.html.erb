@@ -17,11 +17,11 @@
         </div>
     </header>
     <div class="dashboard-navbar">
-        <ul>
-            <li><%= link_to "News", "", class: "dashboard-links", data: { turbo: false} %></li>
-            <li><%= link_to "Articles", "", class: "dashboard-links", data: { turbo: false} %></li>
-            <li><%= link_to "Game Reviews", game_reviews_path, class: "dashboard-links", data: { turbo: false} %></li>
-            <li><%= link_to "Book Reviews", "", class: "dashboard-links", data: { turbo: false} %></li>
-        </ul>
+        <%= tabs_tag(:builder => CustomTabsBuilder) do |tab| %>
+            <%= tab.news 'News', "", class: "dashboard-links" %>
+            <%= tab.articles 'Articles', "", class: "dashboard-links" %>
+            <%= tab.game_reviews 'Game Reviews', game_reviews_path, class: "dashboard-links" %>
+            <%= tab.book_reviews 'Book Reviews', "", class: "dashboard-links" %>
+        <% end %>
     </div>
-</div>
+</div>  

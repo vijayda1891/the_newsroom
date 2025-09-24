@@ -1,12 +1,22 @@
 class GameReviewsController < ApplicationController
     before_action :authenticate_user!
+    set_tab :game_reviews
 
     def index
-        @game_reviews = GameReview.all
+        @game_reviews = GameReview.order(release: :desc)
+        @recent_Reviews = GameReview.order(created_at: :desc).limit(5)
     end
 
     def new
         @game_review = GameReview.new
+    end
+
+    def show
+        @game_review = GameReview.find(params[:id])
+    end
+
+    def edit
+        @game_review = GameReview.find(params[:id])
     end
 
     def create
@@ -15,6 +25,15 @@ class GameReviewsController < ApplicationController
             redirect_to game_reviews_path, notice: "Review saved successfully"
         else
             render :new, status: :unprocessable_entity
+        end
+    end
+
+    def update
+        @game_review = GameReview.find(params[:id])
+        if @game_review.update(game_review_params)
+            redirect_to game_review_path(@game_review), notice: "Review updated successfully"
+        else
+            render :edit, status: :unprocessable_entity
         end
     end
 

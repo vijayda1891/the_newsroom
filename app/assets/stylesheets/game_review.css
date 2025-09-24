@@ -142,7 +142,7 @@
     color: #eebb79;
 }
 
-.review-descripttion{
+.review-description{
     color: #ffffff;
     font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
@@ -164,7 +164,62 @@
     color: orange;
 }
 
-.filled-star {
-  color: gold; /* Or any desired color for the filled star */
-  font-size: 24px; /* Adjust size as needed */
+.full-review-content{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:space-around;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.full-review-image{
+    transform: scale(0.9);    
+}
+
+.full-review-review{
+    color: #ffffff;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.full-review-header{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    color: #eebb79;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+.full-review-back, .full-review-edit{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: #eebb79;
+    font-weight: bold;
+}
+
+.sidebar-review-card{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-bottom: 2px solid rgb(116, 103, 103);
+    gap: 10px;
+}
+
+.sidebar-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar-image-box{
+    flex: 1;
+}
+.sidebar-review-content{
+    flex: 1;
 }
