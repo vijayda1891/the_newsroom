@@ -23,3 +23,32 @@
 .sub-heading-content{
     margin-top: 10px;
 }
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.first a, .prev a, .page a, .next a, .last a{
+    text-decoration: none;
+    color:  #efd8ba;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.current{
+    background-color: #f5e5da;
+    padding: 2px;
+    border-radius: 2px;
+    color: #242326;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.first a:hover, .prev a:hover, .page a:hover, .next a:hover, .last a:hover{
+    background-color: #f5e5da;
+    padding: 2px;
+    border-radius: 2px;
+    color: #242326;
+}

@@ -3,7 +3,7 @@ class GameReviewsController < ApplicationController
     set_tab :game_reviews
 
     def index
-        @game_reviews = GameReview.order(release: :desc)
+        @game_reviews = GameReview.order(release: :desc).page(params[:page])
         @recent_Reviews = GameReview.order(created_at: :desc).limit(5)
     end
 
