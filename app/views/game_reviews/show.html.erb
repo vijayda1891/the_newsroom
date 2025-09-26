@@ -12,5 +12,11 @@
         <div class="full-review-review">
             <p><%= simple_format(@game_review.review) %></p>
         </div>
+        <div class="full-review-rating"> 
+            <%= @game_review.rating %>
+        </div>
+        <div class="full-review-text-verdict">
+            <%= ratings_helper(@game_review.rating) %>
+        </div>
     </div>
 </body>

@@ -23,8 +23,9 @@
                         <% end %>
                         <p class="review-description"><%= review.short_description %></p>
                         <p class="review-release"><%= review.release.strftime("%B %e, %Y") %></p>
-                        <p class="review-rating"><%=  review.rating %></p>
+                        <p class="review-rating"><%= review.rating %></p>
                     </div>
+                    
                 </div>
                 <% end %>
                 <%= paginate @game_reviews %>
@@ -32,7 +33,7 @@
             <div class="right-main-content">
                 <div class="heading-description">
                     <h3> About </h3>
-                    <p> Find your next captivating gaming moment. Reviews about a wide variety of games across multiple genre's. Each review is scored based on it's overall quality. </p>
+                    <p> Find your next captivating gaming moment. Reviews about a wide variety of games across multiple genre's. Each review is scored to a maximim of 100, based on several factors and it's overall quality. </p>
                 </div>
                 <div class="sidebar-content">
                     <div class="recent-reviews-header">

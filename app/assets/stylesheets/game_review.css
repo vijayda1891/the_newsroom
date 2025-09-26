@@ -125,7 +125,7 @@
 
 .review-content {
     padding: 2px 16px;
-    flex: 2.5;
+    flex: 1.5;
     line-height: 15px;
 }
 
@@ -153,7 +153,18 @@
 }
 
 .review-rating{
-    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    color:  #242326;
+    background-color: #efd8ba;
+    border: 2px solid #fa3100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .full-review-link{
@@ -222,6 +233,28 @@
 }
 .sidebar-review-content{
     flex: 1;
+}
+
+.full-review-rating {
+    width: 120px;
+    height: 120px;
+    border-radius:50%;
+    color:  #242326;
+    background-color: #efd8ba;
+    border: 5px solid #fa3100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+.full-review-text-verdict{
+    color: #eebb79;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 2.2em;
 }
 
 
