@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_09_19_201435) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_26_155133) do
+  create_table "book_reviews", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "title", default: "", null: false
+    t.float "rating", default: 0.0, null: false
+    t.text "review", null: false
+    t.date "published", null: false
+    t.string "author", default: "", null: false
+    t.string "avatar"
+    t.string "genre", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "game_reviews", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title", default: "", null: false
     t.integer "rating", default: 0, null: false

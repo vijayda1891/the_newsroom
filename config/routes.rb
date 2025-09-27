@@ -22,4 +22,15 @@ Rails.application.routes.draw do
    root "pages#index"
 
   resources :game_reviews
+  resources :book_reviews do 
+    collection do 
+      get :fiction
+      get :history
+      get :non_fiction
+      get :mystery
+      get :science
+      get :romance
+      get :spirituality
+    end
+  end
 end

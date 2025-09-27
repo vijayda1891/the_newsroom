@@ -6,47 +6,6 @@
                 <h3> New Game Review</h3>
             </div>
         </div>
-        <div class="game-review-form">
-            <%= form_for(@game_review, url: game_reviews_path(@game_review)) do |f| %>
-                <%= render "users/shared/error_messages", resource: @game_review %>
-                
-                
-                <div class="formGroup">
-                    <%= f.label :title, class: "game-review-lables" %>
-                    <%= f.text_field :title, class: "form-field-uniform" %>
-                </div>
-
-                <div class="formGroup">
-                    <%= f.label "Attach", class: "game-review-lables" %>
-                    <%= f.file_field :avatar, class: "image-field" %>
-                </div>
-                
-                <div class="formGroup">
-                    <%= f.label :rating, class: "game-review-lables" %>
-                    <%= f.number_field :rating, class: "form-field-uniform", min: 0, max: 100 %>  
-                </div>
-
-                <div class="formGroup">
-                    <%= f.label :release, class: "game-review-lables" %>
-                    <%= f.date_field :release, class: "form-field-uniform" %>
-                </div>
-                
-
-                <div class="formGroup">
-                    <%= f.label :short_description, class: "game-review-lables" %>
-                    <%= f.text_area :short_description, class: "form-field-uniform", rows: 3 %>
-                </div>
-
-                <div class="formGroup">
-                    <%= f.label :review, class: "game-review-lables" %>
-                    <%= f.text_area :review, class: "form-field-uniform", rows: 15 %>
-                </div>
-
-                <div class="form-actions">
-                    <%= f.submit "Create", class: "game-review-submit", id: "" %>
-                </div>
-
-            <% end %>
-        </div>
+        <%= render "partials/game_review_form", url: game_reviews_path(@game_review), action: "new" %>
     </main>
 </body>
