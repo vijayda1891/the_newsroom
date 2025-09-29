@@ -27,8 +27,12 @@
             </div>
             <div class="right-main-content">
                 <div class="tab-heading-description">
-                    <h3> About </h3>
-                    <p> Here you'll discover the best book recommendations from the world's most successful and interesting people. </p>
+                    <% if action != "index" %>    
+                        <h3> <%= action.camelize %> </h3>
+                    <% else %>
+                        <h3> About </h3>
+                    <% end %>
+                    <p> <%= genre_description(action) %> </p>
                 </div>
                 <div class="sidebar-content">
                     <div class="sidebar-sub-header">
