@@ -15,7 +15,7 @@
                 <% @book_reviews.each do |review| %>
                     <%= link_to book_review_path(review), class: "book-full-review-link", data: { turbo: false} do %>    
                         <div class="book-card">
-                            <%= image_tag review.avatar.url, class: "book-image" %>
+                            <div class="book-card-image"><%= image_tag review.avatar.url, class: "book-image" %></div>
                             <div class="book-container">
                                 <h4>by <%= review.author %></h4>
                                 <p> <%= review.rating %></p>
