@@ -31,6 +31,7 @@ Rails.application.routes.draw do
       get :science
       get :romance
       get :spirituality
+      get :fantasy
     end
   end
 end

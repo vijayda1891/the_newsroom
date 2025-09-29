@@ -18,7 +18,7 @@
                             <div class="book-card-image"><%= image_tag review.avatar.url, class: "book-image" %></div>
                             <div class="book-container">
                                 <h4>by <%= review.author %></h4>
-                                <p> <%= review.rating %></p>
+                                <p> <%= render_stars(review.rating) %></p>
                             </div>
                         </div>
                     <% end %>
@@ -48,6 +48,7 @@
                             <%= tab.science 'Science', science_book_reviews_path, class: "book-links" %>
                             <%= tab.romance 'Romance', romance_book_reviews_path, class: "book-links" %>
                             <%= tab.spirituality 'Spirituality', spirituality_book_reviews_path, class: "book-links" %>
+                            <%= tab.fantasy 'Fantasy', fantasy_book_reviews_path, class: "book-links" %>
                         <% end %>
                     </div
                 </div>

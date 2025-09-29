@@ -151,9 +151,25 @@
   font-weight: bold;
   font-style: italic;
   padding: 4px;
+  border-radius: 4px;
 }
 
 .book-published{
   color: #efd8ba;
+}
+
+.book-rating{
+  color: #efd8ba;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.genre-link{
+  text-decoration: none;
+  color:black;
+}
+
+.book-genre:hover{
+  background-color:#f3c385;
 }
 

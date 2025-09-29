@@ -10,6 +10,7 @@ class BookReviewsController < ApplicationController
     set_tab :science, :navigation, :only => %w(science)
     set_tab :romance, :navigation, :only => %w(romance)
     set_tab :spirituality, :navigation, :only => %w(spirituality)
+    set_tab :fantasy, :navigation, :only => %w(fantasy)
 
     def index
         @book_reviews = BookReview.all.page(params[:page])
@@ -41,6 +42,10 @@ class BookReviewsController < ApplicationController
 
     def spirituality
         @book_reviews = BookReview.where(genre: "Spirituality").page(params[:page])
+    end
+
+    def fantasy
+        @book_reviews = BookReview.where(genre: "Fantasy").page(params[:page]) 
     end
 
     def new

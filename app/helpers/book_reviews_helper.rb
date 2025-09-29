@@ -19,9 +19,51 @@ module BookReviewsHelper
             text += "Science (from the Latin scientia, meaning “knowledge”) is the effort to discover, and increase human understanding of how the physical world works. Through controlled methods, science uses observable physical evidence of natural phenomena to collect data, and analyzes this information to explain what and how things work."
         elsif action == "spirituality"
             text += "Spirituality may refer to almost any kind of meaningful activity, personal growth, or blissful experience. Traditionally, spirituality refers to a process of re-formation of the personality but there is no precise definition of spirituality."
+        elsif action == "fantasy"
+            text += "Fantasy is a genre that uses magic and other supernatural forms as a primary element of plot, theme, and/or setting. Fantasy is generally distinguished from science fiction and horror by the expectation that it steers clear of technological and macabre themes, respectively, though there is a great deal of overlap between the three "
         else
             text += "Here you'll discover the best book recommendations from the world's most successful and interesting people."                           
         end
         return text
+    end
+
+    def render_stars(rating, max_stars = 5)
+        output = ""
+        full_stars = rating.floor
+        half_star = (rating - full_stars) >= 0.5
+
+        full_stars.times do
+            output << content_tag(:i, "", class: "bi bi-star-fill") 
+        end
+
+        if half_star
+            output << content_tag(:i, "", class: "bi bi-star-half") 
+        end
+
+        (max_stars - full_stars - (half_star ? 1 : 0)).times do
+            output << content_tag(:i, "", class: "bi bi-star") 
+        end
+
+        output.html_safe
+    end
+
+    def genre_links(review)
+        if review.genre == "History"
+            return link_to review.genre, history_book_reviews_path, class: "genre-link", data: { turbo: false}
+        elsif review.genre == "Fantasy"
+            return link_to review.genre, fantasy_book_reviews_path, class: "genre-link", data: { turbo: false}
+        elsif review.genre == "Fiction"
+            return link_to review.genre, fiction_book_reviews_path, class: "genre-link", data: { turbo: false}
+        elsif review.genre == "Non-Fiction"
+            return link_to review.genre, non_fiction_book_reviews_path, class: "genre-link", data: { turbo: false}
+        elsif review.genre == "Mystery"
+            return link_to review.genre, mystery_book_reviews_path, class: "genre-link", data: { turbo: false}
+        elsif review.genre == "Science"
+            return link_to review.genre, science_book_reviews_path, class: "genre-link", data: { turbo: false}
+        elsif review.genre == "Romance"
+            return link_to review.genre, romance_book_reviews_path, class: "genre-link", data: { turbo: false}
+        elsif review.genre == "Spirituality"
+            return link_to review.genre, spirituality_book_reviews_path, class: "genre-link", data: { turbo: false}
+        end
     end
 end
