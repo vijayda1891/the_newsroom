@@ -34,4 +34,5 @@ Rails.application.routes.draw do
       get :fantasy
     end
   end
+  resources :articles
 end

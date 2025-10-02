@@ -70,7 +70,7 @@ class BookReviewsController < ApplicationController
     end
 
     def update
-        @book_review = GameReview.find(params[:id])
+        @book_review = BookReview.find(params[:id])
         if @book_review.update(book_review_params)
             redirect_to book_review_path(@book_review), notice: "Review updated successfully"
         else

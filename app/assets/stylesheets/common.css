@@ -15,15 +15,6 @@
     font-weight: bold;
 }
 
-.current{
-    background-color: #f5e5da;
-    padding: 2px;
-    border-radius: 2px;
-    color: #242326;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 .first a:hover, .prev a:hover, .page a:hover, .next a:hover, .last a:hover{
     background-color: #f5e5da;
     padding: 2px;
@@ -175,3 +166,12 @@
 }
 
 /* review forms css end */
+
+/* sub navbar css start*/
+.current{
+    padding: 2px;
+    border-radius: 2px;
+    color: #ffe000;
+    text-decoration: none;
+}
+/* sub navbar css end */

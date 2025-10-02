@@ -1,0 +1,18 @@
+<body class="app-common-container">
+    <%= render "partials/common_header" %>
+    <main class="sub-heading-content">
+        <div class="article-navigation">
+            <div><%= link_to "Back", :back, class: "article-view-back", data: { turbo: false} %></div>
+            <div class=""><%= link_to "Edit", edit_article_path(@article), class: "article-view-edit", data: { turbo: false} %></div>
+        </div>
+        <div class="article-body">
+            <div>
+                <h1> <%= @article.title %> </h1>
+            </div>
+            <center><%#= image_tag @article.avatars, class: "article-main-image", :size => '1000x500' %></center>
+            <div class="article-content">
+                <p> <%= @article.content %> </p>
+            </div>
+        </div>
+    </main>
+</body> 

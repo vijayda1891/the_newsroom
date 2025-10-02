@@ -14,10 +14,18 @@
 .book-links a{
   display: block;
   text-decoration: none;
-  font-family: monospace;
-  font-size: large;
-  font-weight: bold;
+  font-size: medium;
   color: #efd8ba;
+  font-family: monospace;
+}
+
+.books-navbar ul li:hover{
+  background-color: rgb(248, 216, 175);
+  border-radius: 2px;
+  color: black;
+  a{
+    color: black;
+  }
 }
 
 .book-review-content{

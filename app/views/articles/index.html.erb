@@ -1,0 +1,31 @@
+<body class="app-common-container">
+    <%= render "partials/common_header" %>
+    <main class="sub-heading-content">
+        <div class="sub-heading-navbar">
+            <%= tabs_tag :namespace => :navigation do |tab| %>
+                <%= tab.index 'General', articles_path, class: "article-links" %>
+                <%= tab.culture 'Culture', "", class: "article-links" %>
+                <%= tab.sports 'Sports', "", class: "article-links" %>
+                <%= tab.technology 'Technology', "", class: "article-links" %>
+            <% end %>
+        </div>
+        <div class="add-new-container new-article">
+            <%= icon "plus" %>
+            <span><%= link_to "Add Article", new_article_path, class: "add-new", data: { turbo: false} %></span>
+        </div>
+        <div class="latest-articles">
+            <div class="latest-article-heading">
+                <h3> Whats New ? </h3>
+            </div>
+            <div class="latest-articles-list">
+                <% @latest_articles.each do |latest| %>
+                    <div class="latest-individual-headline">
+                        <%= link_to article_path(latest), class: "", data: { turbo: false} do%>
+                            <h3> <%= latest.title %> </h3>  
+                        <% end %>  
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </main>
+</body>
