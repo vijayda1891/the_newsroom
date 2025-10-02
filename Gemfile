@@ -68,7 +68,6 @@ gem "devise", "~> 4.9", ">= 4.9.3"
 gem "carrierwave", "~> 3.1", ">= 3.1.2"
 gem "tabs_on_rails", "~> 3.0"
 gem "kaminari", "~> 1.2", ">= 1.2.2"
-gem "mini_magick", "~> 5.3", ">= 5.3.1"
 group :development, :test do
   gem "rspec-rails", "~> 8.0", ">= 8.0.1"
   gem "dotenv-rails", "~> 2.1", ">= 2.1.1"
